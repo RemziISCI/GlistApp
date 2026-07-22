@@ -95,13 +95,13 @@ set(TOP_DIR ${APP_DIR}/../..)
 set(MAIN_DIR ${TOP_DIR}/GlistEngine)
 set(ENGINE_DIR ${MAIN_DIR}/engine)
 
-if(NOT TARGET GlistEngine)
-	if(APPLE)
-		add_subdirectory(${ENGINE_DIR} ./_build)
-	else()
-		include(${ENGINE_DIR}/CMakeLists.txt)
-	endif()
+
+if(APPLE)
+	add_subdirectory(${ENGINE_DIR} ./_build)
+else()
+	include(${ENGINE_DIR}/CMakeLists.txt)
 endif()
+
 
 ########## SOURCE FILES AND INCLUDE DIRECTORIES ##########
 
