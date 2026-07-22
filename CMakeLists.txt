@@ -91,7 +91,7 @@ if(IOS)
 	enable_language(OBJCXX)
 endif()
 
-if (IS_ANDROID)
+if (ANDROID)
 	if (EXISTS "${APP_DIR}/../../GlistEngine")
 		set(TOP_DIR ${APP_DIR}/../..)
 	else ()
@@ -125,7 +125,7 @@ set(GlistApp_HEADERS
 		${APP_DIR}/src/gCanvas.h
 )
 
-if(IS_ANDROID)
+if(ANDROID)
 	add_library(${APP_NAME} SHARED
 			${GlistApp_SOURCES}
 			${GlistApp_HEADERS})

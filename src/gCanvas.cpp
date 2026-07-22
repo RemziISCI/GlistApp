@@ -8,9 +8,7 @@
 
 #include "gCanvas.h"
 
-
-
-gCanvas::gCanvas(gApp* root) : gAppCanvasBase(root) {
+gCanvas::gCanvas(gApp* root) : gBaseCanvas(root) {
 	this->root = root;
 }
 
@@ -49,7 +47,7 @@ void gCanvas::mouseDragged(int x, int y, int button) {
 }
 
 void gCanvas::mousePressed(int x, int y, int button) {
-//	gLogi("gCanvas") << "mousePressed" << ", x:" << x << ", y:" << y << ", b:" << button;
+ 	gLogi("gCanvas") << "mousePressed" << ", x:" << x << ", y:" << y << ", b:" << button;
 }
 
 void gCanvas::mouseReleased(int x, int y, int button) {
@@ -57,7 +55,7 @@ void gCanvas::mouseReleased(int x, int y, int button) {
 }
 
 void gCanvas::mouseScrolled(int x, int y) {
-//	gLogi("gCanvas") << "mouseScrolled" << ", x:" << x << ", y:" << y;
+// 	gLogi("gCanvas") << "mouseScrolled" << ", x:" << x << ", y:" << y;
 }
 
 void gCanvas::mouseEntered() {
@@ -81,7 +79,7 @@ void gCanvas::touchMoved(int x, int y, int fingerId) {
 }
 
 void gCanvas::touchPressed(int x, int y, int fingerId) {
-	gLogi("gCanvas") << "touched";
+	gLogi("gCanvas") << "touched" << ", x:" << x << ", y:" << y << ", fingerId:" << fingerId;
 }
 
 void gCanvas::touchReleased(int x, int y, int fingerId) {

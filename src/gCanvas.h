@@ -8,21 +8,11 @@
 #ifndef GCANVAS_H_
 #define GCANVAS_H_
 
-#if defined(ANDROID) || defined(__ANDROID__)
-#include "gAndroidCanvas.h"
-#include "gAndroidUtil.h"
-typedef gAndroidCanvas gAppCanvasBase;
-#else
-enum DeviceOrientation { };
-#include "gBaseCanvas.h"
-typedef gBaseCanvas gAppCanvasBase;
-#endif
-
 #include "gApp.h"
 #include "gImage.h"
 
 
-class gCanvas : public gAppCanvasBase {
+class gCanvas : public gBaseCanvas {
 public:
 	gCanvas(gApp* root);
 	virtual ~gCanvas();
